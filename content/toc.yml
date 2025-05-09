@@ -1,0 +1,15 @@
+toc:
+  - group: Getting Started
+    items:
+      - generate: How to Get Started
+        from: getting-started
+  - generate: API Endpoints
+    from: endpoints
+  - generate: Models
+    from: models
+  - group: Guided Walkthrough
+    items:
+      - page: OAuth login Walkthrough
+        file: api-recipes/oauth2.md
+      - page: Generate Report Walkthrough
+        file: api-recipes/guides.md

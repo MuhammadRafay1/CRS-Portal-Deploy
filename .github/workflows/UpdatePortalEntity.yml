@@ -1,0 +1,23 @@
+name: Update Portal Entity
+
+on:
+  workflow_dispatch:  
+  push:
+    branches: 
+      - master 
+
+jobs:
+  update-portal:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - uses: actions/checkout@v1
+      name : checkout-repo
+      id: checkout-repo
+
+    - name: Zip spec files
+      run: zip -qq -r spec.zip ./spec/.
+     
+    - name: inplace-import
+      run: curl -X PUT --url 'https://api.apimatic.io/api-entities/${{ secrets.API_ENTITY_ID }}' -H 'content-type:multipart/form-data' -H 'Authorization:X-Auth-Key ${{ secrets.API_KEY }}' -F 'file=@spec.zip'
