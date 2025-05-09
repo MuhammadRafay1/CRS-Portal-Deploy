@@ -15,7 +15,7 @@ jobs:
      - name: Install jq
        run: sudo apt-get install jq    
       
-#      checkout repo
+
      - uses: actions/checkout@v2
        name : checkout-repo
        id: checkout-repo  
