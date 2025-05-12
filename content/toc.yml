@@ -5,9 +5,9 @@ toc:
         from: getting-started
   - group: API Recipes
     items:
-      - page: OAuth login Walkthrough
+      - page: OAuth login Recipe
         file: api-recipes/oauth2.md
-      - page: Generate Report Walkthrough
+      - page: Generate Report Recipe
         file: api-recipes/guides.md        
   - generate: API Endpoints
     from: endpoints
